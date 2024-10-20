@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Space Exploration</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: black;
+        }
+
+        .stars, .twinkling {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: -1;
+        }
+
+        .stars {
+            background: url("pexels-felixmittermeier-956981.jpg") repeat top center;
+            
+        }
+
+        .twinkling {
+            background: url("pexels-felixmittermeier-956981.jpg") repeat top center;
+            animation: twinkling 200s linear infinite;
+        }
+
+        .content {
+            color: white;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .content h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .content p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .explore-btn {
+            padding: 15px 30px;
+            background-color: #ff6f61;
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+
+        .explore-btn:hover {
+            background-color: #ff2f1d;
+        }
+
+        /* Animation */
+        @keyframes moveStars {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100%); }
+        }
+
+        @keyframes twinkling {
+            from { opacity: 1; }
+            to { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="content">
+        <h1>Explore the Universe</h1>
+        <p>Discover the endless wonders of space</p>
+        <a href="#" class="explore-btn">Start Your Journey</a>
+    </div>
+</body>
+</html>
